@@ -1,10 +1,10 @@
 const images = [
-  'general-contracting.jpeg',
-  'construction-buildings.jpeg',
-  'engineering-design.jpg',
-  'restoration-renovation.webp',
-  'engineering-supervision.jpg',
-  'project-management.jpeg',
+  'images/general-contracting.jpeg',
+  'images/construction-buildings.jpeg',
+  'images/engineering-design.jpg',
+  'images/restoration-renovation.webp',
+  'images/engineering-supervision.jpg',
+  'images/project-management.jpeg',
 ];
 const services = [
   {
@@ -72,7 +72,7 @@ const copy = {
     contactDescription: 'لديك مشروع أو فكرة؟ تواصل معنا وسنكون سعداء بمساعدتك وتحويل فكرتك إلى واقع.',
     location: 'الموقع', name: 'الاسم الكامل', emailLabel: 'البريد الإلكتروني', phoneLabel: 'رقم الهاتف',
     suggestion: 'تفضل بمقترحك', send: 'إرسال الرسالة', sent: 'شكرًا لتواصلك معنا! سيتم الرد عليك في أقرب وقت.',
-    quickLinks: 'روابط سريعة', footerServices: 'خدماتنا', copyright: '© 2026 Balfaqıh Construction — جميع الحقوق محفوظة',
+    quickLinks: 'روابط سريعة', footerServices: 'خدماتنا', copyright: '© 2026 Balfaqih Construction — جميع الحقوق محفوظة',
     backServices: 'العودة إلى الخدمات', detailHeading: 'ما نقدمه', menuOpen: 'فتح القائمة', menuClose: 'إغلاق القائمة', toTop: 'العودة إلى الأعلى',
   },
   en: {
@@ -99,15 +99,15 @@ const copy = {
     ],
     testimonialsKicker: 'Client voices', testimonialsTitle: 'What our clients say about', testimonialsAccent: 'their experience',
     testimonials: [
-      ['Professional service, excellent execution, and great attention to detail. The project was delivered on time. We thank execution manager Mohammed Balfaqıh for his excellent work.', 'Dr. Awad Balfaqıh', 'Commercial project owner'],
-      ['A highly professional team that offered clear, practical solutions throughout every stage of construction.', 'Raghad Balfaqıh', 'Real estate investor'],
-      ['One of my best experiences with a contractor: high standards, efficiency, and careful attention to safety.', 'Abdullah Balfaqıh', 'Residential project manager'],
+      ['Professional service, excellent execution, and great attention to detail. The project was delivered on time. We thank execution manager Mohammed Balfaqih for his excellent work.', 'Dr. Awad Balfaqih', 'Commercial project owner'],
+      ['A highly professional team that offered clear, practical solutions throughout every stage of construction.', 'Raghad Balfaqih', 'Real estate investor'],
+      ['One of my best experiences with a contractor: high standards, efficiency, and careful attention to safety.', 'Abdullah Balfaqih', 'Residential project manager'],
     ],
     contactKicker: 'Contact us', contactTitle: 'Let’s build', contactAccent: 'your next project',
     contactDescription: 'Have a project or an idea? Get in touch. We would be glad to help turn it into reality.',
     location: 'Location', name: 'Full name', emailLabel: 'Email address', phoneLabel: 'Phone number',
     suggestion: 'Share your suggestion', send: 'Send message', sent: 'Thank you for getting in touch. We will reply as soon as possible.',
-    quickLinks: 'Quick links', footerServices: 'Services', copyright: '© 2026 Balfaqıh Construction — All rights reserved',
+    quickLinks: 'Quick links', footerServices: 'Services', copyright: '© 2026 Balfaqih Construction — All rights reserved',
     backServices: 'Back to services', detailHeading: 'What we provide', menuOpen: 'Open menu', menuClose: 'Close menu', toTop: 'Back to top',
   },
 };
@@ -128,7 +128,7 @@ function header(t, isDetail) {
   const labels = t.nav;
   const sectionLinks = ['#home', '#about', '#services', '#testimonials', '#contact'];
   return `<header class="site-header" id="site-header"><div class="container navbar">
-    <a class="brand" href="#home" aria-label="Balfaqıh Construction home"><span class="brand-ar">${language === 'ar' ? 'بلفقية' : 'Balfaqıh'}</span><span class="brand-en">${language === 'ar' ? 'CONSTRUCTION' : 'CONSTRUCTION'}</span></a>
+    <a class="brand" href="#home" aria-label="Balfaqih Construction home"><span class="brand-ar">${language === 'ar' ? 'بلفقية' : 'Balfaqih'}</span><span class="brand-en">${language === 'ar' ? 'CONSTRUCTION' : 'CONSTRUCTION'}</span></a>
     <nav class="nav-links${menuExpanded ? ' open' : ''}" aria-label="${language === 'ar' ? 'القائمة الرئيسية' : 'Main navigation'}">
       ${labels.map((label, index) => `<a href="${sectionLinks[index]}" data-nav-link>${label}</a>`).join('')}
     </nav>
@@ -139,7 +139,7 @@ function header(t, isDetail) {
 
 function footer(t) {
   return `<footer class="site-footer"><div class="container footer-grid">
-    <div><h2 class="footer-brand">${language === 'ar' ? 'بلفقية للمقاولات' : 'Balfaqıh Construction'}</h2><p>${language === 'ar' ? 'حلول هندسية ومقاولات إنشائية متكاملة تجمع بين الجودة والابتكار.' : 'Integrated engineering and construction contracting, grounded in quality and innovation.'}</p></div>
+    <div><h2 class="footer-brand">${language === 'ar' ? 'بلفقية للمقاولات' : 'Balfaqih Construction'}</h2><p>${language === 'ar' ? 'حلول هندسية ومقاولات إنشائية متكاملة تجمع بين الجودة والابتكار.' : 'Integrated engineering and construction contracting, grounded in quality and innovation.'}</p></div>
     <div><h3>${t.quickLinks}</h3><div class="footer-links"><a href="#home">${t.nav[0]}</a><a href="#about">${t.nav[1]}</a><a href="#services">${t.nav[2]}</a><a href="#contact">${t.nav[4]}</a></div></div>
     <div><h3>${t.footerServices}</h3><div class="footer-links">${services.slice(0, 4).map((service) => `<a href="#service-${service.id}">${service[language].title}</a>`).join('')}</div></div>
   </div><div class="container copyright">${t.copyright}</div></footer>`;
@@ -206,7 +206,7 @@ function render() {
   const t = copy[language];
   document.documentElement.lang = language;
   document.documentElement.dir = language === 'ar' ? 'rtl' : 'ltr';
-  document.title = currentDetail() ? `${currentDetail()[language].title} | Balfaqıh Construction` : 'Balfaqıh Construction | بلفقية للمقاولات';
+  document.title = currentDetail() ? `${currentDetail()[language].title} | Balfaqih Construction` : 'Balfaqih Construction | بلفقية للمقاولات';
   shownDetail = currentDetail() ? currentDetail().id : null;
   menuExpanded = false;
   app.innerHTML = currentDetail() ? renderDetail(t, currentDetail()) : renderHome(t);
