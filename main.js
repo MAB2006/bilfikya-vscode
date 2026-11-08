@@ -1,11 +1,11 @@
-const images = [
-  'images/general-contracting.jpeg',
-  'images/construction-buildings.jpeg',
-  'images/engineering-design.jpg',
-  'images/restoration-renovation.webp',
-  'images/engineering-supervision.jpg',
-  'images/project-management.jpeg',
-];
+const images =
+  'general-contracting.jpeg',
+  'construction-buildings.jpeg',
+  'engineering-design.jpg',
+  'restoration-renovation.webp',
+  'engineering-supervision.jpg',
+  'project-management.jpeg',
+];];
 const services = [
   {
     id: 'general-contracting',
